@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.SiteEditController">
+	<top>
+		<AnchorPane id="A" prefHeight="73.0" prefWidth="800.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fitHeight="78.0" fitWidth="99.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<image>
+						<Image url="@../../../Icons/FinalLogo.jpg" />
+					</image>
+				</ImageView>
+				<HBox layoutX="606.0" prefHeight="65.0" prefWidth="122.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="42.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+									<graphic>
+										<ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../../../Icons/homepage%20icon.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</Button>
+							</children>
+						</AnchorPane>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<ImageView accessibleRole="PARENT" fitHeight="32.0" fitWidth="30.0" layoutX="-82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" x="100.0">
+									<image>
+										<Image url="@../../../Icons/user%20logo.png" />
+									</image>
+									<viewport>
+										<Rectangle2D />
+									</viewport>
+								</ImageView>
+								<Hyperlink layoutX="10.0" layoutY="42.0" onAction="#logout" style="-fx-border-color: white;" text="Logout" />
+							</children>
+						</AnchorPane>
+					</children>
+				</HBox>
+			</children>
+		<!-- 	<opaqueInsets>
+				<Insets />
+			</opaqueInsets> -->
+		</AnchorPane>
+	</top>
+	<left>
+		<AnchorPane prefHeight="525.0" prefWidth="445.0" style="-fx-background-color: #D6E8EC;" BorderPane.alignment="CENTER">
+			<children>
+				<Label layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="99.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #5394fc;" text="Edit Site" textFill="#5394fc">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<GridPane alignment="CENTER" layoutX="24.0" layoutY="86.0" prefHeight="358.0" prefWidth="432.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="86.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="135.3333231608073" minWidth="10.0" prefWidth="135.3333231608073" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="168.33331807454425" minWidth="10.0" prefWidth="148.66666666666669" />
+						<ColumnConstraints hgrow="SOMETIMES" maxWidth="148.66661071777344" minWidth="10.0" prefWidth="68.66666666666669" />
+					</columnConstraints>
+					<rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="27.333343505859375" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+               <children>
+                  <Label text="Country Name:" />
+      								<Label text="City Name:" GridPane.rowIndex="1" />
+      								<Label text="Site Name:" GridPane.rowIndex="2" />
+      								<Label text="Location:" GridPane.rowIndex="3" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <JFXTextField fx:id="Location_x" layoutY="7.0" promptText="Location x" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <JFXTextField fx:id="Location_y" layoutX="-4.0" layoutY="3.0" promptText="Location y" />
+                     </children>
+                  </AnchorPane>
+      								<Label text="Category" GridPane.rowIndex="7" />
+      								<Label text="Accessability" GridPane.rowIndex="8" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+            								<ComboBox fx:id="categorylist" layoutX="-1.0" layoutY="2.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" style="-fx-background-radius: 50; -fx-background-color: #5acef4; -fx-border-radius: 50;" visibleRowCount="6" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="10.0" layoutY="235.0" text="Recommended Visit Time" GridPane.rowIndex="6" />
+                  <JFXTextField fx:id="Country_Name" promptText="Country Name" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="City_Name" layoutX="146.0" layoutY="13.0" promptText="City name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="site_name" layoutX="146.0" layoutY="50.0" promptText="site name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+            								<CheckBox fx:id="Accessibility_yes" layoutX="6.0" layoutY="7.0" mnemonicParsing="false" onAction="#get_yes" text="yes" />
+            								<CheckBox fx:id="Accessibility_no" layoutX="50.0" layoutY="8.0" mnemonicParsing="false" onAction="#get_no" text="no" />
+                     </children>
+                  </AnchorPane>
+                  <JFXTextArea fx:id="Description" prefHeight="51.0" prefWidth="510.0" promptText="Description" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="RecommendedVisitTime" layoutX="146.0" layoutY="75.0" promptText="In Minutes" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+            						<Label layoutX="2.0" layoutY="3.0" text="Description" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+				</GridPane>
+            <Label layoutX="43.0" layoutY="444.0" text="*Required" textFill="#f82b2b" />
+            <Label layoutX="15.0" layoutY="251.0" text="*" textFill="#f82b2b">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="334.0" text="*" textFill="#f82b2b">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="375.0" text="*" textFill="#f82b2b">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="413.0" text="*" textFill="#f82b2b">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+			</children>
+		</AnchorPane>
+	</left>
+	<right>
+		<AnchorPane prefHeight="517.0" prefWidth="403.0" style="-fx-background-color: #D6E8EC;" BorderPane.alignment="CENTER">
+			<children>
+				<Button fx:id="save" layoutX="665.0" layoutY="449.0" mnemonicParsing="false" onAction="#save" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #53D8FE; -fx-border-radius: 50; -fx-background-radius: 50;" text="Save Changes" textFill="WHITE" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="27.0" />
+				<Button fx:id="bake_without_save" layoutX="148.0" layoutY="449.0" mnemonicParsing="false" onAction="#bake" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #53D8FE; -fx-border-radius: 50; -fx-background-radius: 50;" text="Back without save" textFill="WHITE" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="147.0" />
+			</children>
+		</AnchorPane>
+	</right>
+	<center>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D6E8EC;" BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>

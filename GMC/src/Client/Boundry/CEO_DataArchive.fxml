@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.ManagerAreaController_CEO">
+<top>
+       <AnchorPane id="A" prefHeight="73.0" prefWidth="800.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="99.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../../Icons/FinalLogo.jpg../../../Icons/FinalLogo.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="606.0" prefHeight="65.0" prefWidth="122.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Icons/homepage%20icon.png../../../Icons/homepage%20icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView accessibleRole="PARENT" fitHeight="32.0" fitWidth="30.0" layoutX="-82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" x="100.0">
+                           <image>
+                              <Image url="@../../../Icons/user%20logo.png../../../Icons/user%20logo.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Hyperlink layoutX="10.0" layoutY="42.0" style="-fx-border-color: white;" text="Logout" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D6E8EC;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="50.0" layoutY="43.0" opacity="0.38" prefHeight="525.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <BorderPane />
+                  <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello CEO:" wrappingWidth="347.13671875">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="NewsTable" prefHeight="469.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn prefWidth="120.0" text="Subjects:" />
+                      <TableColumn prefWidth="479.0" text="News:" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #91C8E7;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="22.0" layoutY="52.0" prefHeight="389.0" prefWidth="139.0">
+               <children>
+                  <JFXButton fx:id="ApproveVersionButton" onAction="#ShowApproveVersion" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Approve Version" />
+                  <JFXButton fx:id="DataArchiveButton" onAction="#ShowDataArchive" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Data Archive" translateY="50.0" />
+                  <JFXButton fx:id="EmployeeInfoButton" onAction="#ShowEmployeeInfo" prefHeight="6.0" prefWidth="139.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Employee Info" translateY="100.0" />
+                  <JFXButton fx:id="ViewReportsButton" onAction="#ShowReports" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="View Reports" translateY="150.0" />
+                  <JFXButton fx:id="ApprovePriceButton" onAction="#ShowApprovePrice" prefHeight="2.0" prefWidth="139.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Approve Price" translateY="200.0" />
+                  <JFXButton fx:id="CostumerInfoButton" onAction="#ShowCostumerInfo" prefHeight="0.0" prefWidth="139.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Costumer Info" translateY="250.0" />
+               </children>
+            </VBox>
+            <JFXButton fx:id="InfoButton" layoutX="14.0" layoutY="486.0" onAction="#ShowManagerInfo" prefHeight="24.0" prefWidth="132.0" style="-fx-background-color: #53DFFF; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back to Manager Info" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

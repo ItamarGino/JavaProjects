@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.UserHomePageController">
+   <center>
+      <AnchorPane prefHeight="516.0" prefWidth="600.0" style="-fx-background-color: #D6E8EC;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="221.0" layoutY="14.0" text="What's New" textFill="#0d69a8">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox layoutX="50.0" layoutY="59.0" prefHeight="303.0" prefWidth="501.0" spacing="10.0">
+               <children>
+                  <AnchorPane fx:id="SecondCityInfo" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="279.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="139.0" prefWidth="153.0" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fx:id="SecondImage" fitHeight="131.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Citys/Jerusalem.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label text="City Name:" />
+                                    <Label fx:id="SecondCityName" layoutX="81.0" layoutY="10.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="186.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Price:" />
+                                    <Label fx:id="SecondCityPrice" layoutX="81.0" layoutY="10.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="40.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ThirdCityInfo" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="11.0" layoutY="14.0" prefHeight="277.0" prefWidth="121.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="139.0" prefWidth="153.0" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fx:id="ThirdImage" fitHeight="131.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Citys/Tel_Aviv.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label text="City Name:" />
+                                    <Label fx:id="ThirdCityName" layoutX="10.0" layoutY="10.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Price:" />
+                                    <Label fx:id="ThirdCityPrice" layoutX="10.0" layoutY="10.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="40.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="FirstCityInfo" layoutX="189.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutY="32.0" prefHeight="309.0" prefWidth="121.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <padding>
+                              <Insets bottom="40.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fx:id="FirstImage" fitHeight="131.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Citys/Rosh_HaAyin.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label text="City Name:" />
+                                    <Label fx:id="FirstCityName" layoutX="10.0" layoutY="10.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Price:" />
+                                    <Label fx:id="FirstCityPrice" layoutX="10.0" layoutY="10.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #91C8E7;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="39.0" layoutY="41.0" prefHeight="310.0" prefWidth="132.0" spacing="50.0">
+               <children>
+                  <JFXButton fx:id="ClientCardButton" layoutX="15.0" layoutY="212.0" onAction="#GoToClientCard" prefHeight="51.0" prefWidth="122.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Client Card" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="CityCatalogButton" layoutX="15.0" layoutY="212.0" onAction="#GoToCityCatalogPage" prefHeight="51.0" prefWidth="122.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="City Catalog" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="ManegerArea" onAction="#GoToManagerArea" prefHeight="51.0" prefWidth="122.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Manger Area" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Button layoutX="46.0" layoutY="449.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 50; -fx-border-radius: 50;" text="Contact " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="ta" layoutX="68.0" layoutY="371.0" prefHeight="30.0" prefWidth="55.0" />
+         </children></AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="73.0" prefWidth="800.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Icons/FinalLogo.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="678.0" layoutY="5.0" prefHeight="65.0" prefWidth="122.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Icons/homepage%20icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView accessibleRole="PARENT" fitHeight="32.0" fitWidth="30.0" layoutX="-82.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" x="100.0">
+                           <image>
+                              <Image url="@../../../Icons/user%20logo.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                        <Hyperlink layoutX="10.0" layoutY="42.0" onAction="#pressLogOut" style="-fx-border-color: white;" text="Logout" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

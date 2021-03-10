@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.MapInfoController">
+<top>
+       <AnchorPane id="A" prefHeight="73.0" prefWidth="800.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="99.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../../Icons/FinalLogo.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="606.0" prefHeight="50.0" prefWidth="152.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="UserPageButton" onAction="#GoToUserHomePage" prefHeight="32.0" prefWidth="28.0" ripplerFill="#0e7c9a">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Icons/homepage%20icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Icons/user%20logo.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="LogoutBtn" onAction="#LogOut" prefHeight="38.0" prefWidth="91.0" ripplerFill="#0e7c9a" text="Logout" textFill="#328ba4" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+         </opaqueInsets>
+      </AnchorPane>
+   </top>
+   <center>
+   </center>
+   <center>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" BorderPane.alignment="CENTER">
+        <items>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="200.0" prefWidth="752.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox layoutX="164.0" layoutY="5.0" prefHeight="166.0" prefWidth="649.0" spacing="50.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="164.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="166.0" prefWidth="191.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="119.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/history.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="Historical" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Historical Sites:" textFill="#148cdd" />
+                                    <Label fx:id="HistoricalNumber" prefHeight="18.0" prefWidth="59.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="168.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/gallery.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="Museums" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Museums Sites:" textFill="#148cdd" />
+                                    <Label fx:id="MuseumsNumber" prefHeight="18.0" prefWidth="59.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="168.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/food.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="Restsaurant" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Restaurants:" textFill="#148cdd" />
+                                    <Label fx:id="RestaurantNumber" prefHeight="18.0" prefWidth="62.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="168.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/hotel.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="Hotels" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Hotels:" textFill="#148cdd" />
+                                    <Label fx:id="HotelsNumber" prefHeight="18.0" prefWidth="62.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="166.0" prefWidth="198.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="182.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/theater.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="MovieTheaters" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Movie Theaters:" textFill="#148cdd" />
+                                    <Label fx:id="MovieTheatersNumber" prefHeight="18.0" prefWidth="62.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="182.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/buildings.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="PublicSites" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Public Sites:" textFill="#148cdd" />
+                                    <Label fx:id="PublicSitesNumber" prefHeight="18.0" prefWidth="62.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="182.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/store.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="Shops" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Shops:" textFill="#148cdd" />
+                                    <Label fx:id="ShopsNumber" prefHeight="18.0" prefWidth="62.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="182.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../Icons/park.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="ParkSites" onAction="#UploadSpecSites" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Park Sites:" textFill="#148cdd" />
+                                    <Label fx:id="ParkNumber" prefHeight="18.0" prefWidth="62.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="171.0" prefWidth="158.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="182.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../Project_X/Icons/destination.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Hyperlink fx:id="Tours" onAction="#UploadTours" style="-fx-border-color: #148cdd; -fx-border-width: 0px 0px 2px 0px;" text="Tours:" textFill="#148cdd" />
+                                    <Label fx:id="TourNumber" prefHeight="18.0" prefWidth="75.0" />
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="98.0" prefWidth="181.0" spacing="30.0">
+                                 <children>
+                                    <JFXButton fx:id="ViewFullSitesBtn" buttonType="RAISED" onAction="#UploadSpecSites" prefHeight="25.0" prefWidth="107.0" ripplerFill="WHITE" style="-fx-background-color: #53D8FE; -fx-background-radius: 100; -fx-border-radius: 100;" text="Upload All Sites" textFill="WHITE" />
+                                    <JFXButton fx:id="SetNewPriceBtn" buttonType="RAISED" onAction="#ChangePaneToSetNewPrice" prefHeight="20.0" prefWidth="152.0" style="-fx-background-color: #53D8FE;" text="Set New Map Price" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../Icons/price-tag.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="MapNameLbl" layoutX="14.0" layoutY="1.0" prefHeight="26.0" prefWidth="87.0" style="-fx-font-size: 15; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" text="Map Details:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="1.0" />
+                  <ImageView fx:id="CityImage" fitHeight="118.0" fitWidth="102.0" layoutX="701.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.105728149414062" AnchorPane.topAnchor="14.0">
+                     <image>
+                        <Image url="@../../../Citys/Jerusalem.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="SitesOrTourLbl" layoutX="861.0" layoutY="138.0" prefHeight="19.0" prefWidth="137.0" underline="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Watching" alignment="CENTER" layoutX="680.0" layoutY="172.0" prefHeight="23.0" prefWidth="167.0" textFill="#148cdd" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="172.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" style="-fx-background-color: #D6E8EC;">
+               <children>
+                  <BorderPane layoutX="299.0" layoutY="15.0" minHeight="0.0" prefHeight="517.0" prefWidth="998.0" style="-fx-background-color: #D6E8EC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <AnchorPane fx:id="SiteOptions" minHeight="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #91C8E7;" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox layoutX="50.0" layoutY="14.0" prefHeight="330.0" prefWidth="200.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="110.0" prefWidth="196.0">
+                                       <children>
+                                          <VBox layoutX="50.0" layoutY="16.0" prefHeight="147.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="Addlbl" layoutX="84.0" layoutY="31.0" text="Add" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXButton fx:id="AddBtn" layoutX="66.0" onAction="#AddSite" text="." AnchorPane.topAnchor="0.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../Icons/add-circular-button.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="122.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="50.0" layoutY="16.0" prefHeight="147.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="Editlbl" layoutX="85.0" layoutY="34.0" text="Edit" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXButton fx:id="EditBtn" layoutX="66.0" layoutY="4.0" onAction="#EditSite" text="." AnchorPane.topAnchor="0.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../Icons/editmap.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="122.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="50.0" layoutY="16.0" prefHeight="147.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="Deletelbl" layoutX="74.0" layoutY="34.0" text="Delete" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXButton fx:id="DeleteBtn" layoutX="66.0" layoutY="4.0" onAction="#DeleteSite" text="." AnchorPane.topAnchor="0.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../Icons/delete-button.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane fx:id="MapView" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane fx:id="SitesAnc" onMouseClicked="#SendOperation" prefHeight="517.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <AnchorPane fx:id="TourAnc" layoutX="10.0" layoutY="10.0" prefHeight="517.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <JFXListView fx:id="ListOfTours" cellHorizontalMargin="17.0" cellVerticalMargin="10.0" layoutY="-1.0" prefHeight="518.0" prefWidth="667.0" style="-fx-background-color: #D6E8EC;" verticalGap="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="0.0" />
+                                    <JFXButton fx:id="AddTourBtn" layoutX="991.0" layoutY="3.0" onAction="#AddTour" prefHeight="514.0" prefWidth="259.0" ripplerFill="WHITE" style="-fx-background-color: #53D8FE;" text="Add Tour" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="SetCityPriceAnc" prefHeight="517.0" prefWidth="798.0" style="-fx-background-color: #D6E8EC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="37.0" prefWidth="96.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #5394fc;" text="Set Price" textFill="#5394fc" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane layoutX="62.0" layoutY="78.0" prefHeight="229.0" prefWidth="344.0" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="78.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.800048828125" minWidth="10.0" prefWidth="121.800048828125" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.199951171875" minWidth="10.0" prefWidth="159.199951171875" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <JFXTextField fx:id="CurrentPriceField" editable="false" GridPane.columnIndex="1" />
+                                          <JFXTextField fx:id="NewPriceField" layoutX="110.0" layoutY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <JFXTextField fx:id="Descriptionlbl" layoutX="166.0" layoutY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="81.0" layoutY="30.0" prefHeight="17.0" prefWidth="101.0" text="Current Map Price:" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label layoutX="81.0" layoutY="30.0" prefHeight="17.0" prefWidth="86.0" text="New Map Price:" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label layoutX="75.0" layoutY="30.0" prefHeight="17.0" prefWidth="109.0" text="Update Description:" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </GridPane>
+                                    <HBox layoutX="399.0" layoutY="307.0" prefHeight="39.0" prefWidth="236.0" spacing="20.0" AnchorPane.leftAnchor="399.0" AnchorPane.topAnchor="307.0">
+                                       <children>
+                                          <JFXButton onAction="#BackToSiteView" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 100; -fx-border-radius: 100;" text="Back" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="10.0" layoutY="10.0" onAction="#SetPriceToMap" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #53D8FE; -fx-background-radius: 100; -fx-border-radius: 100;" text="Set Price" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <effect>
+                                    <Glow level="0.0" />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   </BorderPane>
